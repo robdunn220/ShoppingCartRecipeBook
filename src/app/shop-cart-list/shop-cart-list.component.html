@@ -1,9 +1,13 @@
-<div class="container-fluid mt-3" style="width: auto">
-  <div class="row mb-2">
-    <div class="col text-center">
-      <input [(ngModel)]="itemName" class="mr-1" type="text" name="itemName" placeholder="Item">
-      <input [(ngModel)]="itemQuantity" class="ml-1" type="text" name="itemQuantity" placeholder="Quantity">
-      <button class="btn btn-sm btn-primary ml-1" (click)='addToList()'>Add</button>
+<div class="container mt-3">
+  <div class="row justify-content-center mb-2">
+    <div class="form-group col-xs-6 col-xs-offset-6">
+      <div class="input-group mx-auto">
+        <input [(ngModel)]="itemName" class="form-control" type="text" name="itemName" placeholder="Item">
+        <input [(ngModel)]="itemQuantity" class="form-control" type="number" min="1" name="itemQuantity" placeholder="Quantity">
+        <span class="input-group-append">
+          <button class="btn btn-sm btn-primary" (click)='addToList()'>Add</button>
+        </span>
+      </div>
     </div>
   </div>
   <div class="row">

@@ -5,6 +5,13 @@ import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ShopCartListComponent } from './shop-cart-list/shop-cart-list.component';
+import { RouterModule, Routes } from '@angular/router';
+
+const routes: Routes = [
+  path: 'shop-cart-list',
+  component: ShopCartListComponent,
+  data: { title: 'Shoppin Cart List' }
+];
 
 @NgModule({
   declarations: [

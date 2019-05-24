@@ -1,6 +1,4 @@
 import { Component } from '@angular/core';
-import { Variable } from '@angular/compiler/src/render3/r3_ast';
-import { forEach } from '@angular/router/src/utils/collection';
 
 @Component({
   selector: 'app-shop-cart-list',
@@ -21,5 +19,8 @@ export class ShopCartListComponent {
     const itemQuantityT = document.createTextNode(this.itemQuantity);
     cellItem.appendChild(itemNameT);
     cellQuantity.appendChild(itemQuantityT);
+
+    this.itemName = null;
+    this.itemQuantity = null;
   }
 }
