@@ -7,4 +7,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'shoppingcart-project';
+  shopCartOpen = false;
+
+  constructor() { }
+
+  shoppingCart() {
+    this.shopCartOpen = !this.shopCartOpen;
+  }
 }
+
+

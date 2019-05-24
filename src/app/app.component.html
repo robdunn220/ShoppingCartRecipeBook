@@ -6,8 +6,13 @@
     </div>
   </div>
   <div class="row">
-    <div class="col text-center"><button class="btn btn-primary btn-block">Cart</button></div>
-    <div class="col text-center"><button class="btn btn-primary btn-block">Recipes</button></div>
+    <div class="col text-center">
+      <button class="btn btn-primary btn-block" (click)="shoppingCart()">Cart</button>
+    </div>
+    <div class="col text-center">
+      <button class="btn btn-primary btn-block">Recipes</button>
+    </div>
   </div>
 </div>
-<router-outlet></router-outlet>
+<app-shop-cart-list *ngIf="shopCartOpen">
+</app-shop-cart-list>

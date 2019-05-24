@@ -1,0 +1,21 @@
+<div class="container-fluid mt-3" style="width: auto">
+  <div class="row mb-2">
+    <div class="col text-center">
+      <input [(ngModel)]="itemName" class="mr-1" type="text" name="itemName" placeholder="Item">
+      <input [(ngModel)]="itemQuantity" class="ml-1" type="text" name="itemQuantity" placeholder="Quantity">
+      <button class="btn btn-sm btn-primary ml-1" (click)='addToList()'>Add</button>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col text-center">
+      <table id="shopListTable" class="table table-bordered" style="margin: auto; width: 50%">
+        <thead>
+          <tr>
+            <th class="fit" scope="col">Item</th>
+            <th class="fit" scope="col">Quantity</th>
+          </tr>
+        </thead>
+      </table>
+    </div>
+  </div>
+</div>
