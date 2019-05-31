@@ -11,8 +11,6 @@ export class AppComponent {
   constructor() { }
 
   shoppingCart() {
-    this.shopCartOpen = !this.shopCartOpen;
+    this.shopCartOpen = true;
   }
 }
-
-

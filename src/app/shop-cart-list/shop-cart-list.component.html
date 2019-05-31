@@ -1,9 +1,17 @@
 <div class="container mt-3">
   <div class="row justify-content-center mb-2">
-    <div class="form-group col-xs-6 col-xs-offset-6">
+    <div *ngIf="!createdTable" class="form-group col-xs-12">
       <div class="input-group mx-auto">
-        <input [(ngModel)]="itemName" class="form-control" type="text" name="itemName" placeholder="Item">
-        <input [(ngModel)]="itemQuantity" class="form-control" type="number" min="1" name="itemQuantity" placeholder="Quantity">
+        <input [(ngModel)]="tableName" type="text" class="form-control" placeholder="Enter a name for your list">
+        <span class="input-group-append">
+          <button [disabled]="!tableName" class="btn btn-sm btn-primary" (click)='createTable()'>Create</button>
+        </span>
+      </div>
+    </div>
+    <div *ngIf="createdTable" class="form-group col-xs-6 col-xs-offset-6">
+      <div class="input-group mx-auto">
+        <input [(ngModel)]="itemName" id="item-name" class="form-control" type="text" name="itemName" placeholder="Item">
+        <input [(ngModel)]="itemQuantity" id="item-quantity" class="form-control" type="number" name="itemQuantity" placeholder="Quantity" min="1">
         <span class="input-group-append">
           <button class="btn btn-sm btn-primary" (click)='addToList()'>Add</button>
         </span>
@@ -12,7 +20,7 @@
   </div>
   <div class="row">
     <div class="col text-center">
-      <table id="shopListTable" class="table table-bordered" style="margin: auto; width: 50%">
+      <table *ngIf="createdTable" id="shopListTable" class="table table-bordered" style="margin: auto; width: 50%">
         <thead>
           <tr>
             <th class="fit" scope="col">Item</th>

@@ -7,12 +7,19 @@ import { Component } from '@angular/core';
 })
 export class ShopCartListComponent {
   data = [];
+  tableName = '';
+  createdTable = false;
   itemName = '';
-  itemQuantity = 0;
+  itemQuantity = null;
   invalidInput = 'Quantity must be a number.';
 
+  createTable() {
+    this.tableName = this.tableName;
+    this.createdTable = true;
+  }
+
   addToList() {
-    if (Number.isInteger(this.itemQuantity)) {
+    if (this.itemName && Number.isInteger(this.itemQuantity) && this.itemQuantity > 0) {
       const table = document.getElementById('shopListTable') as HTMLTableElement;
       const row = table.insertRow(table.rows.length);
       const cellItem = row.insertCell(0);
