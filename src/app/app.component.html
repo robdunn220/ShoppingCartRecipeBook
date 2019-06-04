@@ -10,9 +10,11 @@
       <button class="btn btn-primary btn-block" (click)="shoppingCart()">Cart</button>
     </div>
     <div class="col text-center">
-      <button class="btn btn-primary btn-block">Recipes</button>
+      <button class="btn btn-primary btn-block" (click)="recipes()">Recipes</button>
     </div>
   </div>
 </div>
 <app-shop-cart-list *ngIf="shopCartOpen">
 </app-shop-cart-list>
+<app-recipes *ngIf="recipesOpen">
+</app-recipes>

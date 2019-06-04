@@ -1,0 +1,15 @@
+<h3>
+  <a *ngIf="!createdTable" (click)="showTable(recipe.name)">{{ recipe.name }}</a>
+</h3>
+<div class="row">
+  <div class="col text-center">
+    <table id="recipeTable" class="table table-bordered" style="margin: auto; width: 50%">
+      <thead>
+        <tr>
+          <th class="fit" scope="col">Item</th>
+          <th class="fit" scope="col">Quantity</th>
+        </tr>
+      </thead>
+    </table>
+  </div>
+</div>

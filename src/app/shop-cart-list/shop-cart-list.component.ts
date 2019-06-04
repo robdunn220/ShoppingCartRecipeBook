@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { RecipesComponent } from '../recipes/recipes.component';
 
 @Component({
   selector: 'app-shop-cart-list',

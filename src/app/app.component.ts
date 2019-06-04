@@ -7,10 +7,17 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'shoppingcart-project';
   shopCartOpen = false;
+  recipesOpen = false;
 
   constructor() { }
 
   shoppingCart() {
     this.shopCartOpen = true;
+    this.recipesOpen = false;
+  }
+
+  recipes() {
+    this.recipesOpen = true;
+    this.shopCartOpen = false;
   }
 }

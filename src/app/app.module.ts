@@ -6,18 +6,23 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ShopCartListComponent } from './shop-cart-list/shop-cart-list.component';
 import { RouterModule, Routes } from '@angular/router';
+import { RecipesComponent } from './recipes/recipes.component';
+import { RecipeImporterService } from './recipe-importer.service';
+import { RecipeListComponent } from './recipes/recipe-list/recipe-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ShopCartListComponent
+    ShopCartListComponent,
+    RecipesComponent,
+    RecipeListComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule
   ],
-  providers: [],
+  providers: [RecipeImporterService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
