@@ -1,7 +1,18 @@
-<div class="row">
-  <div class="col-md-5">
-    <app-recipe-list>
-
+<div class="row mt-3">
+  <div class="col-sm-12 text-center">
+    <ul *ngIf="!displayRecipe">
+      <h3>
+        Recipes
+      </h3>
+      <li *ngFor="let name of recipeNames">
+        <a (click)="recipeSelected(name)">
+          {{ name }}
+        </a>
+      </li>
+    </ul>
+    <router-outlet></router-outlet>
+    <app-recipe-list *ngIf="displayRecipe" [recipeName]="recipeName">
+    
     </app-recipe-list>
   </div>
 </div>

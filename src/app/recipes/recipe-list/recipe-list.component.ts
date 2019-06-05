@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { RecipeImporterService } from 'src/app/recipe-importer.service';
 
 @Component({
   selector: 'app-recipe-list',
@@ -6,17 +7,14 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./recipe-list.component.css']
 })
 export class RecipeListComponent implements OnInit {
-  @Input() recipe = {
-    name: 'Chicken',
-    items: {Chicken: 3,
-            Onion: 1,
-            Garlic: 2}
-  };
+  @Input() recipeName: string;
+  recipeChosen: [];
+
   createdTable = false;
 
-  constructor() { }
+  constructor(private service: RecipeImporterService) { }
 
   ngOnInit() {
-  }
-
+    this.recipeChosen = this.service.getRecipe(this.recipeName);
+   }
 }

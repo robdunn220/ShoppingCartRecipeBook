@@ -6,18 +6,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'shoppingcart-project';
-  shopCartOpen = false;
-  recipesOpen = false;
+  appState: boolean;
 
   constructor() { }
 
   shoppingCart() {
-    this.shopCartOpen = true;
-    this.recipesOpen = false;
+    this.appState = true;
   }
 
   recipes() {
-    this.recipesOpen = true;
-    this.shopCartOpen = false;
+    this.appState = false;
   }
 }
